@@ -1,0 +1,138 @@
+<!-- Página del mapa de la sede principal -->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ParkURBIke</title>
+  <!-- Responsividad -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Fuente -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Estilo -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- Skin  -->
+  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+  <link rel="icon" href="bici.ico">
+  <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
+    <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Header principal -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <span class="logo-mini">CEA-IoT</span>
+      <span class="logo-lg"><b>ParkURBIke</b></span>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+                      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span></a>
+          </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+
+      <!-- Sidebar -->
+      <ul class="sidebar-menu">
+        <li class="header">Menú</li>
+        <!-- fa-algo son los iconos, hay varios para elegir -->
+        <li><a href="index.html"><i class="fa fa-line-chart"></i> <span>Estado actual</span></a></li>
+        <!-- <li><a href="reservas3.html"><i class="fa fa-bicycle"></i> <span>Reservas</span></a></li> -->
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Parqueaderos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="sedeprincipal.html">Sede principal</a></li>
+            <li><a href="angelico.html">Doctor Angélico</a></li>
+            <li><a href="sedes.html">Cicloparqueadros</a></li>
+          </ul>
+        </li>
+        <br><br><br><br><br><br><br><br><br>
+      
+       <img src="manual/images/purbi.png" alt="Logo bicis" style="width:220px;height:200px;">
+      
+      </ul>
+    </section>
+  </aside>
+
+  <!-- Content Wrapper con el contenido de la página (cabecera) -->
+  <div class="content-wrapper">
+    <section class="content-header">
+
+      <!-- initMapAngelico() es el script para inicializar el mapa de Google Maps -->
+      <!-- En el id mapid2 se presenta el mapa visualmente -->
+      <h3><center><b> Sede Doctor Angélico.</center></h3></b> 
+      <script src="js/mapas.js"></script>
+<script>
+    initMapAngelico();
+</script>
+
+      <div id="mapid2"></div>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCojcLqAmsM2uZ3QO05p-nIGXJj_-XoGcY&signed_in=true&callback=initMapAngelico"></script>
+
+    </section>
+    <!-- Contenido principal -->
+    <div class="content-header">
+      <h5><center><b> Este proyecto fue diseñado por el Centro de Excelencia y Apropiación en Internet de las Cosas (CEA - IoT), nodo USTA línea gobierno.</center></h5></b> 
+ 
+      <br>
+    </div>
+  </div>
+     
+  <!-- /.content-wrapper -->
+
+  <!-- Footer -->
+   <footer class="main-footer">
+    <!-- Parte derecha -->
+     <center>
+       <img src="manual/images/usta.jpeg" alt="Logo Usta" style="width:200px;height:67px;">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="manual/images/logocea.png" alt="Logo cea" style="width:110px;height:35px;">
+           </center>
+    </div>
+    <!-- Parte izquierda -->
+   
+            
+        
+        
+         <div class="pull-right hidden-xs">
+  </footer>
+
+<!-- Scripts JS -->
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- Scripts propios y archivos json -->
+<script src="dist/js/app.min.js"></script>
+
+<!-- Scripts propios y archivos json -->
+<script type="text/javascript" src="js/reservation.js"></script>
+<script type="text/javascript" src="http://40.124.12.75:8080/js/test2.json"></script>
+<!-- <script type="text/javascript" src="http://192.168.1.19:8080/js/test.json"></script> -->
+
+</body>
+</html>
